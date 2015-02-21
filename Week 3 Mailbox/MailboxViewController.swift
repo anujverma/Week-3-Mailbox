@@ -140,11 +140,11 @@ class MailboxViewController: UIViewController {
                 UIView.animateWithDuration(0.5, delay: 0.2, options: UIViewAnimationOptions.AllowUserInteraction, animations: { () -> Void in
                     self.listImageView.alpha = 1.0
                     }, completion: { (Bool) -> Void in
-                        UIView.animateWithDuration(0.3, delay: 1.5, options: UIViewAnimationOptions.AllowUserInteraction, animations: { () -> Void in
-                            self.listImageView.alpha = 0.0
-                            }, completion: { (Bool) -> Void in
-                                //
-                        })
+//                        UIView.animateWithDuration(0.3, delay: 1.5, options: UIViewAnimationOptions.AllowUserInteraction, animations: { () -> Void in
+//                            self.listImageView.alpha = 0.0
+//                            }, completion: { (Bool) -> Void in
+//                                //
+//                        })
                 })
                 
                 
@@ -155,12 +155,7 @@ class MailboxViewController: UIViewController {
                 UIView.animateWithDuration(0.5, delay: 0.2, options: UIViewAnimationOptions.AllowUserInteraction, animations: { () -> Void in
                     self.rescheduleImageView.alpha = 1.0
                 }, completion: { (Bool) -> Void in
-                    UIView.animateWithDuration(0.3, delay: 1.5, options: UIViewAnimationOptions.AllowUserInteraction, animations: { () -> Void in
-                        self.rescheduleImageView.alpha = 0.0
 
-                    }, completion: { (Bool) -> Void in
-                        //
-                    })
                 })
 
             } else if (translation.x > 150) {
@@ -261,4 +256,20 @@ class MailboxViewController: UIViewController {
     }
 
     
+    @IBAction func didTapDismiss(sender: UITapGestureRecognizer) {
+        UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.AllowUserInteraction, animations: { () -> Void in
+            self.listImageView.alpha = 0.0
+            }, completion: { (Bool) -> Void in
+                //
+        })
+    }
+    
+    @IBAction func didTapRescheduleDismiss(sender: UITapGestureRecognizer) {
+        UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.AllowUserInteraction, animations: { () -> Void in
+            self.rescheduleImageView.alpha = 0.0
+            
+            }, completion: { (Bool) -> Void in
+                //
+        })
+    }
 }
