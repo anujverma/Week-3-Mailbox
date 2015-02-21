@@ -4,8 +4,8 @@ Week-3-Mailbox-Prototype
 A prototype of the Mailbox iOS app.
 
 How many hours did it take to complete?
-- Took about 10-12 hours.
-- 
+- Took about 12 hours.
+
 What did you complete
 
 On dragging the message left...
